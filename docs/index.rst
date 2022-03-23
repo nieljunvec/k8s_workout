@@ -7,9 +7,17 @@ Welcome to k8s Workout's documentation!
 =======================================
 
 .. toctree::
-   :glob:
+   :maxdepth: 2
 
-   chapters/*
+   chapters/pods
+   chapters/services
+   chapters/commands
+   chapters/deployment
+   chapters/namespaces
+   chapters/kubectl
+   chapters/configmap
+   chapters/secrets
+
 
 
 
