@@ -27,7 +27,7 @@ Permet d'exposer le pod à l'intérieur du cluster, le service ne peut être con
 
 spécification
 
-.. code-block::
+.. code-block:: yaml
 
     serviceApi: v1
     kind: service
@@ -52,7 +52,7 @@ Un port est ouvert sur chaque noeud du cluster pour un NodePort donné (30 000 e
 Ce port peut être choisi dans le range par défaut, s'il n'est pas choisi, il est attribué automatiquement.
 
 
-.. code-block::
+.. code-block:: yaml
 
     serviceApi: v1
     kind: service
@@ -81,7 +81,7 @@ service ne peut pas être distribué depuis le cluster local...
 Il existe tout de même des solutions pour créer un load balancer sur un cluster créé onpremise (metal lb)
 
 
-.. code-block::
+.. code-block:: yaml
 
     serviceApi: v1
     kind: service
@@ -101,7 +101,7 @@ Commandes impératives
 
 expose : si on a un pod déjà en service, on peut directement faire une commande expose
 
-.. code-block::
+.. code-block:: bash
 
     kubectl expose pod whoami \
         --type=NodePort \
