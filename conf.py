@@ -1,12 +1,13 @@
 # import os
 # import sys
 # sys.path.insert(0, os.path.abspath('.'))
-project = 'k8s Workout'
+project = 'Local Documentation'
 copyright = '2022, Niel Junvec'
 author = 'Niel Junvec'
 
 extensions = [
-    'sphinx.ext.autodoc'
+    'sphinx.ext.autodoc',
+    'sphinx_tabs.tabs'
 ]
 
 templates_path = []

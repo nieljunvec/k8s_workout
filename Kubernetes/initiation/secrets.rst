@@ -22,7 +22,7 @@ Secret de type "generic"
 ------------------------
 
 
-.. code-block::
+.. code-block:: shell
 
     # création de fichiers contenant des credentials
     echo -n "admin" > ./username.txt
@@ -54,4 +54,32 @@ Les secrets sont encodés en base64, on peut les récupérer avec
 .. code-block::
 
     echo "{mdp encodé}" | base64 -D
+
+Exemple
+_______
+
+.. code-block::
+
+    # conversion de la donnée en b64
+    echo -n "mongodb://admin:46fe3efa@mgserv1.org/mgmt" | base64
+
+    # spécification de l'objet secret
+    # mongo-creds.yaml
+    apiVersion: v1
+    kind: Secret
+    metadata:
+      name: mongo-creds
+    data:
+      mongoURL: bW9uZ29kYjovL2FkbWluOjQ2ZmUzZWZhQG1nc2VydjEub3JnL21nbXQ=
+
+    # création de l'objet secret
+    kubectl create -f mongo-creds.yaml
+
+
+Les Secrets de type ``docker-registry``
+---------------------------------------
+
+
+Les secrets de type ``tls``
+---------------------------
 
